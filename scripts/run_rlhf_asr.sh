@@ -1,0 +1,1 @@
+CUDA_VISIBLE_DEVICES=0,1 torchrun --nproc_per_node=2 finetune.py --base_model=openai/whisper-tiny  --train_data=train.json --test_data=test.json --output_dir=20250210
