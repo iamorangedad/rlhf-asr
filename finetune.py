@@ -7,7 +7,7 @@ import torch
 from datasets import load_dataset
 from transformers import AutoModelForCausalLM, AutoTokenizer
 from transformers import TrainingArguments
-from transformers import WhisperForConditionalGeneration, WhisperProcessor
+from transformers import WhisperProcessor
 from peft import (
     LoraConfig,
     get_peft_model,
@@ -20,6 +20,7 @@ from src.data_reader import CustomDataset
 from src.log import log_creater, StreamToLogger
 from src.utils import print_arguments, add_arguments
 from src.data_utils import DataCollatorSpeechSeq2SeqWithPadding
+from src.model import CustomWhisperForConditionalGeneration
 
 # ===============================================================================
 # ================================= log  =================================
